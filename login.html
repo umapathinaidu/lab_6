@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>login</title>
+        <style>
+            body{
+                margin-left:32%;
+                background-color:rgb(53, 110, 114);
+           
+            }
+        .login{
+            margin-top:50px;
+            background-image: url(https://th.bing.com/th/id/OIP.HIzMGE8wrrfiwXS3JwHypAHaE9?pid=ImgDet&rs=1);
+            background-repeat: no-repeat;
+            color:rgba(0, 0, 0, 0.72);
+            border-radius:0px 14px 0px 14px;
+            padding-left:20%;
+            padding-right:20%;
+            padding-top:5%;
+            height:253px;
+            width:240px;
+        }
+        input{
+            width:200px;
+        }
+        </style>
+        <script>
+          function validation() {
+              var name=document.loginform.name.value;
+              var password = document.loginform.password.value;
+              if(name==null || name==""){
+                  alert("name can't be blank");
+                  return false;
+              }
+              else if(password.length<6){
+                  alert("Password must be at least 6 characters long.");
+                  return false;
+              }
+          }  
+        </script>
+    </head>
+<body>
+    <div class="login"> 
+        <h2 style="color:#e1b340; text-shadow:1px 1px rgb(52, 0, 143);"><center>Explore World</center></h2>
+        <h3><center>Login</center></h3>
+        <form name="loginform" method="post" action="mainhome.html" onsubmit="return validation()">
+            Username : <br>
+            <input type="text" placeholder="Username" name="name"><br><br>
+            Password : <br>
+            <input type="password" placeholder="Password" name="password"><br>
+            <br><br>
+           <center><input style="width:90px; height:30px; 
+           color:white; background-color:#e1b340;
+            border:0px solid; border-radius:4px;" type="submit" value="Login"></center>
+        </form>
+    </div>
+</body>
+</html>
